@@ -71,9 +71,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clients\AccountClient.vb" />
+    <Compile Include="Clients\ApplicationClient.vb" />
+    <Compile Include="Clients\AuthClient.vb" />
+    <Compile Include="Clients\BackupClient.vb" />
+    <Compile Include="Clients\ServerClient.vb" />
     <Compile Include="Exceptions\ApiExceptions.vb" />
     <Compile Include="Extensions\ApiExtensions.vb" />
     <Compile Include="Models\Responses\Account.vb" />
+    <Compile Include="Models\Responses\Application.vb" />
+    <Compile Include="Models\Responses\Auth.vb" />
+    <Compile Include="Models\Responses\Backup.vb" />
+    <Compile Include="Models\Responses\Server.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

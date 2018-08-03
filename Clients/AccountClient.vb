@@ -1,7 +1,5 @@
 ﻿Imports System.IO
-Imports System.Net
 Imports Newtonsoft.Json
-Imports Vultr.API.Extensions
 Imports Vultr.API.Models.Responses
 
 Namespace API.Clients
@@ -12,19 +10,13 @@ Namespace API.Clients
             _ApiKey = ApiKey
         End Sub
 
-        Public Shared ReadOnly VultrApiUrl As String = "https://api.vultr.com/v1/"
-
+        ''' <summary>
+        ''' Retrieve information about the current account.
+        ''' </summary>
+        ''' <returns>Returns account information and HTTP API Respopnse.</returns>
         Function GetInfo() As AccountResult
-            Dim httpWebRequest As HttpWebRequest = WebRequest.Create(VultrApiUrl & "account/info")
-            httpWebRequest.UserAgent = "VultrAPI.Net"
-            httpWebRequest.ContentType = "application/json"
-            httpWebRequest.Method = "GET"
-            httpWebRequest.Headers.Add("API-Key", _ApiKey)
-            ServicePointManager.Expect100Continue = True
-            ServicePointManager.SecurityProtocol = CType(3072, SecurityProtocolType)
-            ServicePointManager.DefaultConnectionLimit = 9999
             Dim answer As New Account
-            Dim httpResponse = CType(httpWebRequest.GetResponse(), HttpWebResponse)
+            Dim httpResponse = Extensions.ApiClient.ApiExecute("account/info", _ApiKey)
             If httpResponse.StatusCode = 200 Then
                 Using streamReader = New StreamReader(httpResponse.GetResponseStream())
                     answer = JsonConvert.DeserializeObject(Of Account)(streamReader.ReadToEnd())

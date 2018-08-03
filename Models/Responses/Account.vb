@@ -1,5 +1,4 @@
 ﻿Imports System.Net
-
 Namespace API.Models.Responses
 
     Public Class Account
