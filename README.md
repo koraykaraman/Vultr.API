@@ -14,15 +14,9 @@
 * Assemblies for .NET 4.5.2
 * Easy installation using [NuGet](https://www.nuget.org/packages/Vultr/) for most .NET flavors
 
-###Example
-```vb
-Dim Client As VultrClient = New VultrClient("YOUR-API-KEY-FROM-Vultr.com")
-Dim Account As AccountResult = Client.Account.GetInfo()
-Dim Applications As ApplicationResult = Client.Application.GetApplications()
-Dim Backups As BackupResult = Client.Backup.GetBackups()
-Dim Servers As ServerResult = Client.Server.GetServers()
-```
+### Example
 
+C#
 ```csharp
 VultrClient Client = new VultrClient("YOUR-API-KEY-FROM-Vultr.com");
 AccountResult Account = Client.Account.GetInfo();
@@ -31,5 +25,13 @@ BackupResult Backups = Client.Backup.GetBackups();
 ServerResult Servers = Client.Server.GetServers();
 ```
 
- 
+VB.NET
+```vb
+Dim Client As VultrClient = New VultrClient("YOUR-API-KEY-FROM-Vultr.com")
+Dim Account As AccountResult = Client.Account.GetInfo()
+Dim Applications As ApplicationResult = Client.Application.GetApplications()
+Dim Backups As BackupResult = Client.Backup.GetBackups()
+Dim Servers As ServerResult = Client.Server.GetServers()
+```
+
   [1]: https://koraykaraman.com/project/1764/Vultr.API/
