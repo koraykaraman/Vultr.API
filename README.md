@@ -14,7 +14,7 @@
 * Assemblies for .NET 4.5.2
 * Easy installation using [NuGet](https://www.nuget.org/packages/Vultr/) for most .NET flavors
 
-###Example
+### Example
 ```vb
 Dim Client As VultrClient = New VultrClient("YOUR-API-KEY-FROM-Vultr.com")
 Dim Account As AccountResult = Client.Account.GetInfo()
