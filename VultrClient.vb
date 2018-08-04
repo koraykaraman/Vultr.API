@@ -62,6 +62,12 @@ Namespace API
         '''
         Public Property SSHKey As SSHKeyClient
         ''' <summary>
+        ''' Startup Script operations
+        ''' </summary>
+        ''' <returns>StartupScript and HTTP Response</returns>
+        '''
+        Public Property StartupScript As StartupScriptClient
+        ''' <summary>
         ''' Operating system operations
         ''' </summary>
         ''' <returns>Operating system and HTTP Response</returns>
@@ -92,6 +98,7 @@ Namespace API
             Server = New ServerClient(ApiKey)
             Snapshot = New SnapshotClient(ApiKey)
             SSHKey = New SSHKeyClient(ApiKey)
+            StartupScript = New StartupScriptClient(ApiKey)
             User = New UserClient(ApiKey)
 
         End Sub
