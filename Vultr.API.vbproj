@@ -74,6 +74,7 @@
     <Compile Include="Clients\ApplicationClient.vb" />
     <Compile Include="Clients\AuthClient.vb" />
     <Compile Include="Clients\BackupClient.vb" />
+    <Compile Include="Clients\ISOImageClient.vb" />
     <Compile Include="Clients\OperatingSystemClient.vb" />
     <Compile Include="Clients\PlanClient.vb" />
     <Compile Include="Clients\RegionClient.vb" />
@@ -85,6 +86,7 @@
     <Compile Include="Models\Responses\Application.vb" />
     <Compile Include="Models\Responses\Auth.vb" />
     <Compile Include="Models\Responses\Backup.vb" />
+    <Compile Include="Models\Responses\ISOImage.vb" />
     <Compile Include="Models\Responses\OperatingSystem.vb" />
     <Compile Include="Models\Responses\Plan.vb" />
     <Compile Include="Models\Responses\Region.vb" />
