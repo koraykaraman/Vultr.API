@@ -29,6 +29,11 @@ Namespace API
         ''' <returns>Block and HTTP Response</returns>
         Public Property Block As BlockClient
         ''' <summary>
+        ''' DNS operations
+        ''' </summary>
+        ''' <returns>DNS and HTTP Response</returns>
+        Public Property DNS As DNSClient
+        ''' <summary>
         ''' Firewall operations
         ''' </summary>
         ''' <returns>Firewall and HTTP Response</returns>
@@ -102,6 +107,7 @@ Namespace API
             Auth = New AuthClient(ApiKey)
             Backup = New BackupClient(ApiKey)
             Block = New BlockClient(ApiKey)
+            DNS = New DNSClient(ApiKey)
             Firewall = New FirewallClient(ApiKey)
             ISOImage = New ISOImageClient(ApiKey)
             Network = New NetworkClient(ApiKey)
