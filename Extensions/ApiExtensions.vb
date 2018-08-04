@@ -8,7 +8,7 @@ Namespace API.Extensions
 
         Public Shared ReadOnly VultrApiUrl As String = "https://api.vultr.com/v1/"
 
-        Public Shared Function ApiExecute(ByVal AccessPoint As String, ByVal ApiKey As String, Optional ByVal Parameters As List(Of KeyValuePair(Of String, String)) = Nothing, Optional ByVal Method As String = "GET") As HttpWebResponse
+        Public Shared Function ApiExecute(ByVal AccessPoint As String, ByVal ApiKey As String, Optional ByVal Parameters As List(Of KeyValuePair(Of String, Object)) = Nothing, Optional ByVal Method As String = "GET") As HttpWebResponse
 
             ServicePointManager.Expect100Continue = True
             ServicePointManager.SecurityProtocol = CType(3072, SecurityProtocolType)
@@ -25,14 +25,14 @@ Namespace API.Extensions
 
             If Method = "GET" Then
                 If IsNothing(Parameters) = False Then
-                    For Each pair As KeyValuePair(Of String, String) In Parameters
+                    For Each pair As KeyValuePair(Of String, Object) In Parameters
                         httpWebRequest.Headers.Add(pair.Key, pair.Value)
                     Next
                 End If
             Else
                 If IsNothing(Parameters) = False Then
                     Dim postData As String = ""
-                    For Each pair As KeyValuePair(Of String, String) In Parameters
+                    For Each pair As KeyValuePair(Of String, Object) In Parameters
                         postData += If(postData = "", "", "&") & pair.Key & "=" & pair.Value
                     Next
                     Dim encoding As New UTF8Encoding

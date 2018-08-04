@@ -1,7 +1,6 @@
 ﻿Imports System.IO
 Imports Newtonsoft.Json
 Imports Vultr.API.Models.Responses
-Imports System.Collections.Specialized
 
 Namespace API.Clients
     Public Class BackupClient
@@ -38,8 +37,8 @@ Namespace API.Clients
         ''' <returns>Returns backup and HTTP API Respopnse.</returns>
         Function GetBackupByBackupId(ByVal BackupId As String) As BackupResult
 
-            Dim dict As New List(Of KeyValuePair(Of String, String))
-            dict.Add(New KeyValuePair(Of String, String)("BACKUPID", BackupId))
+            Dim dict As New List(Of KeyValuePair(Of String, Object))
+            dict.Add(New KeyValuePair(Of String, Object)("BACKUPID", BackupId))
 
             Dim answer As New BackupResult
             Dim httpResponse = Extensions.ApiClient.ApiExecute("backup/list", _ApiKey, dict)
@@ -62,8 +61,8 @@ Namespace API.Clients
         ''' <returns>Returns backup and HTTP API Respopnse.</returns>
         Function GetBackupBySUBID(ByVal SubId As String) As BackupResult
 
-            Dim dict As New List(Of KeyValuePair(Of String, String))
-            dict.Add(New KeyValuePair(Of String, String)("SUBID", SubId))
+            Dim dict As New List(Of KeyValuePair(Of String, Object))
+            dict.Add(New KeyValuePair(Of String, Object)("SUBID", SubId))
 
             Dim answer As New BackupResult
             Dim httpResponse = Extensions.ApiClient.ApiExecute("backup/list", _ApiKey, dict)

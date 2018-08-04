@@ -36,6 +36,16 @@ Namespace API.Models.Responses
         Public Property FIREWALLGROUPID As String
     End Class
 
+    Public Class BandWidth
+        Public Property incoming_bytes As String()()
+        Public Property outgoing_bytes As String()()
+    End Class
+
+    Public Structure BandwidthResult
+        Public Property BandWidth As BandWidth
+        Public Property ApiResponse As HttpWebResponse
+    End Structure
+
     Public Class V6Networks
         Public Property v6_network As String
         Public Property v6_main_ip As String

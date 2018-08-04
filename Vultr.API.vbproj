@@ -74,14 +74,22 @@
     <Compile Include="Clients\ApplicationClient.vb" />
     <Compile Include="Clients\AuthClient.vb" />
     <Compile Include="Clients\BackupClient.vb" />
+    <Compile Include="Clients\OperatingSystemClient.vb" />
+    <Compile Include="Clients\PlanClient.vb" />
+    <Compile Include="Clients\RegionClient.vb" />
     <Compile Include="Clients\ServerClient.vb" />
+    <Compile Include="Clients\UserClient.vb" />
     <Compile Include="Exceptions\ApiExceptions.vb" />
     <Compile Include="Extensions\ApiExtensions.vb" />
     <Compile Include="Models\Responses\Account.vb" />
     <Compile Include="Models\Responses\Application.vb" />
     <Compile Include="Models\Responses\Auth.vb" />
     <Compile Include="Models\Responses\Backup.vb" />
+    <Compile Include="Models\Responses\OperatingSystem.vb" />
+    <Compile Include="Models\Responses\Plan.vb" />
+    <Compile Include="Models\Responses\Region.vb" />
     <Compile Include="Models\Responses\Server.vb" />
+    <Compile Include="Models\Responses\User.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

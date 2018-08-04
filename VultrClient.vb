@@ -28,6 +28,27 @@ Namespace API
         ''' </summary>
         ''' <returns>Server and HTTP Response</returns>
         Public Property Server As ServerClient
+        ''' <summary>
+        ''' Region operations
+        ''' </summary>
+        ''' <returns>Region and HTTP Response</returns>
+        Public Property Region As RegionClient
+        ''' <summary>
+        ''' Plan operations
+        ''' </summary>
+        ''' <returns>Plan and HTTP Response</returns>
+        Public Property Plan As PlanClient
+        ''' <summary>
+        ''' Operating system operations
+        ''' </summary>
+        ''' <returns>Operating system and HTTP Response</returns>
+        Public Property OperatingSystem As OperatingSystemClient
+        ''' <summary>
+        ''' User operations
+        ''' </summary>
+        ''' <returns>Users and HTTP Response</returns>
+        Public Property User As UserClient
+
         Public Shared ReadOnly VultrApiUrl As String = "https://api.vultr.com/v1/"
 
         Public Sub New(ByVal ApiKey As String)
@@ -41,6 +62,11 @@ Namespace API
             Auth = New AuthClient(ApiKey)
             Backup = New BackupClient(ApiKey)
             Server = New ServerClient(ApiKey)
+            Region = New RegionClient(ApiKey)
+            Plan = New PlanClient(ApiKey)
+            OperatingSystem = New OperatingSystemClient(ApiKey)
+            User = New UserClient(ApiKey)
+
         End Sub
 
     End Class
