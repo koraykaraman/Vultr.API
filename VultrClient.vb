@@ -56,6 +56,12 @@ Namespace API
         '''
         Public Property Snapshot As SnapshotClient
         ''' <summary>
+        ''' SSHKey operations
+        ''' </summary>
+        ''' <returns>SSHKey and HTTP Response</returns>
+        '''
+        Public Property SSHKey As SSHKeyClient
+        ''' <summary>
         ''' Operating system operations
         ''' </summary>
         ''' <returns>Operating system and HTTP Response</returns>
@@ -85,6 +91,7 @@ Namespace API
             Region = New RegionClient(ApiKey)
             Server = New ServerClient(ApiKey)
             Snapshot = New SnapshotClient(ApiKey)
+            SSHKey = New SSHKeyClient(ApiKey)
             User = New UserClient(ApiKey)
 
         End Sub
