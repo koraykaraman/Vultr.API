@@ -183,7 +183,6 @@ Namespace API.Clients
             End If
             Return New ServerResult With {.ApiResponse = httpResponse, .Servers = answer}
         End Function
-
     End Class
 
 End Namespace

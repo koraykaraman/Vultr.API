@@ -34,20 +34,27 @@ Namespace API
         ''' <returns>Network and HTTP Response</returns>
         Public Property Network As NetworkClient
         ''' <summary>
-        ''' Server operations
+        ''' Plan operations
         ''' </summary>
-        ''' <returns>Server and HTTP Response</returns>
-        Public Property Server As ServerClient
+        ''' <returns>Plan and HTTP Response</returns>
+        Public Property Plan As PlanClient
         ''' <summary>
         ''' Region operations
         ''' </summary>
         ''' <returns>Region and HTTP Response</returns>
         Public Property Region As RegionClient
         ''' <summary>
-        ''' Plan operations
+        ''' Server operations
         ''' </summary>
-        ''' <returns>Plan and HTTP Response</returns>
-        Public Property Plan As PlanClient
+        ''' <returns>Server and HTTP Response</returns>
+        ''' 
+        Public Property Server As ServerClient
+        ''' <summary>
+        ''' Snapshot operations
+        ''' </summary>
+        ''' <returns>Snapshot and HTTP Response</returns>
+        '''
+        Public Property Snapshot As SnapshotClient
         ''' <summary>
         ''' Operating system operations
         ''' </summary>
@@ -77,6 +84,7 @@ Namespace API
             Plan = New PlanClient(ApiKey)
             Region = New RegionClient(ApiKey)
             Server = New ServerClient(ApiKey)
+            Snapshot = New SnapshotClient(ApiKey)
             User = New UserClient(ApiKey)
 
         End Sub

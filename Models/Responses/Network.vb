@@ -1,5 +1,4 @@
-﻿Imports System.ComponentModel
-Imports System.Net
+﻿Imports System.Net
 
 Namespace API.Models.Responses
     Public Class Network
