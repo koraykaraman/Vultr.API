@@ -60,6 +60,11 @@ Namespace API
         ''' <returns>Region and HTTP Response</returns>
         Public Property Region As RegionClient
         ''' <summary>
+        ''' ReservedIP operations
+        ''' </summary>
+        ''' <returns>ReservedIP and HTTP Response</returns>
+        Public Property ReservedIP As ReservedIPClient
+        ''' <summary>
         ''' Server operations
         ''' </summary>
         ''' <returns>Server and HTTP Response</returns>
@@ -114,6 +119,7 @@ Namespace API
             OperatingSystem = New OperatingSystemClient(ApiKey)
             Plan = New PlanClient(ApiKey)
             Region = New RegionClient(ApiKey)
+            ReservedIP = New ReservedIPClient(ApiKey)
             Server = New ServerClient(ApiKey)
             Snapshot = New SnapshotClient(ApiKey)
             SSHKey = New SSHKeyClient(ApiKey)

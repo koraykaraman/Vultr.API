@@ -82,6 +82,7 @@
     <Compile Include="Clients\OperatingSystemClient.vb" />
     <Compile Include="Clients\PlanClient.vb" />
     <Compile Include="Clients\RegionClient.vb" />
+    <Compile Include="Clients\ReservedIPClient.vb" />
     <Compile Include="Clients\ServerClient.vb" />
     <Compile Include="Clients\SnapshotClient.vb" />
     <Compile Include="Clients\SSHKeyClient.vb" />
@@ -101,6 +102,7 @@
     <Compile Include="Models\Responses\OperatingSystem.vb" />
     <Compile Include="Models\Responses\Plan.vb" />
     <Compile Include="Models\Responses\Region.vb" />
+    <Compile Include="Models\Responses\ReservedIP.vb" />
     <Compile Include="Models\Responses\Server.vb" />
     <Compile Include="Models\Responses\Snapshot.vb" />
     <Compile Include="Models\Responses\SSHKey.vb" />
