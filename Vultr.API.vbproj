@@ -74,6 +74,7 @@
     <Compile Include="Clients\ApplicationClient.vb" />
     <Compile Include="Clients\AuthClient.vb" />
     <Compile Include="Clients\BackupClient.vb" />
+    <Compile Include="Clients\BlockClient.vb" />
     <Compile Include="Clients\FirewallClient.vb" />
     <Compile Include="Clients\ISOImageClient.vb" />
     <Compile Include="Clients\NetworkClient.vb" />
@@ -91,6 +92,7 @@
     <Compile Include="Models\Responses\Application.vb" />
     <Compile Include="Models\Responses\Auth.vb" />
     <Compile Include="Models\Responses\Backup.vb" />
+    <Compile Include="Models\Responses\Block.vb" />
     <Compile Include="Models\Responses\Firewall.vb" />
     <Compile Include="Models\Responses\ISOImage.vb" />
     <Compile Include="Models\Responses\Network.vb" />

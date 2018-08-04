@@ -24,9 +24,20 @@ Namespace API
         ''' <returns>Backup and HTTP Response</returns>
         Public Property Backup As BackupClient
         ''' <summary>
+        ''' Block operations
+        ''' </summary>
+        ''' <returns>Block and HTTP Response</returns>
+        Public Property Block As BlockClient
+        ''' <summary>
+        ''' Firewall operations
+        ''' </summary>
+        ''' <returns>Firewall and HTTP Response</returns>
+        Public Property Firewall As FirewallClient
+        ''' <summary>
         ''' ISO Image operations
         ''' </summary>
         ''' <returns>ISO Image and HTTP Response</returns>
+        ''' 
         Public Property ISOImage As ISOImageClient
         ''' <summary>
         ''' Network operations
@@ -90,6 +101,8 @@ Namespace API
             Application = New ApplicationClient(ApiKey)
             Auth = New AuthClient(ApiKey)
             Backup = New BackupClient(ApiKey)
+            Block = New BlockClient(ApiKey)
+            Firewall = New FirewallClient(ApiKey)
             ISOImage = New ISOImageClient(ApiKey)
             Network = New NetworkClient(ApiKey)
             OperatingSystem = New OperatingSystemClient(ApiKey)
