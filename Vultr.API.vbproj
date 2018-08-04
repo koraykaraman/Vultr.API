@@ -81,6 +81,7 @@
     <Compile Include="Clients\RegionClient.vb" />
     <Compile Include="Clients\ServerClient.vb" />
     <Compile Include="Clients\SnapshotClient.vb" />
+    <Compile Include="Clients\SSHKeyClient.vb" />
     <Compile Include="Clients\UserClient.vb" />
     <Compile Include="Exceptions\ApiExceptions.vb" />
     <Compile Include="Extensions\ApiExtensions.vb" />
@@ -95,6 +96,7 @@
     <Compile Include="Models\Responses\Region.vb" />
     <Compile Include="Models\Responses\Server.vb" />
     <Compile Include="Models\Responses\Snapshot.vb" />
+    <Compile Include="Models\Responses\SSHKey.vb" />
     <Compile Include="Models\Responses\User.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

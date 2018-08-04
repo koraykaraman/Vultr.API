@@ -13,7 +13,7 @@ Namespace API.Clients
         ''' <summary>
         ''' List all snapshots on the current account.
         ''' </summary>
-        ''' <returns>List of all all snapshots on the current account.</returns>
+        ''' <returns>List of all snapshots on the current account.</returns>
         Function GetSnapshots() As SnapshotResult
             Dim answer As New Dictionary(Of String, Snapshot)
             Dim httpResponse = Extensions.ApiClient.ApiExecute("snapshot/list", _ApiKey)
