@@ -21,8 +21,18 @@ Namespace API
         ''' <summary>
         ''' Backup operations
         ''' </summary>
-        ''' <returns>Auth and HTTP Response</returns>
+        ''' <returns>Backup and HTTP Response</returns>
         Public Property Backup As BackupClient
+        ''' <summary>
+        ''' ISO Image operations
+        ''' </summary>
+        ''' <returns>ISO Image and HTTP Response</returns>
+        Public Property ISOImage As ISOImageClient
+        ''' <summary>
+        ''' Network operations
+        ''' </summary>
+        ''' <returns>Network and HTTP Response</returns>
+        Public Property Network As NetworkClient
         ''' <summary>
         ''' Server operations
         ''' </summary>
@@ -61,10 +71,12 @@ Namespace API
             Application = New ApplicationClient(ApiKey)
             Auth = New AuthClient(ApiKey)
             Backup = New BackupClient(ApiKey)
-            Server = New ServerClient(ApiKey)
-            Region = New RegionClient(ApiKey)
-            Plan = New PlanClient(ApiKey)
+            ISOImage = New ISOImageClient(ApiKey)
+            Network = New NetworkClient(ApiKey)
             OperatingSystem = New OperatingSystemClient(ApiKey)
+            Plan = New PlanClient(ApiKey)
+            Region = New RegionClient(ApiKey)
+            Server = New ServerClient(ApiKey)
             User = New UserClient(ApiKey)
 
         End Sub
